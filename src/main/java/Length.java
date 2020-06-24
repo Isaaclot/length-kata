@@ -7,29 +7,29 @@ public class Length {
         this.unit = unit;
     }
 
-    public Length as(String u) {
+    public Length as(String unit) {
         Length len = this;
         if (this.unit.equals("f")) {
-            if (u.equals("yard")) {
-                len = new Length(this.value / 3, u);
-            } else if (u.equals("inch")) {
-                len = new Length(this.value * 12, u);
+            if (unit.equals("yard")) {
+                len = new Length(this.value / 3, unit);
+            } else if (unit.equals("inch")) {
+                len = new Length(this.value * 12, unit);
             }
         }
 
         if (this.unit.equals("yard")) {
-            if (u.equals("inch")) {
-                len = new Length(this.value * 36, u);
-            } else if (u.equals("f")){
-                len = new Length(this.value * 3, u);
+            if (unit.equals("inch")) {
+                len = new Length(this.value * 36, unit);
+            } else if (unit.equals("f")){
+                len = new Length(this.value * 3, unit);
             }
         }
 
         if (this.unit.equals("inch")) {
-            if (u.equals("f")) {
-                len = new Length(this.value / 12, u);
-            } else if (u.equals("yard")) {
-                len = new Length(this.value / 36, u);
+            if (unit.equals("f")) {
+                len = new Length(this.value / 12, unit);
+            } else if (unit.equals("yard")) {
+                len = new Length(this.value / 36, unit);
             }
         }
 
